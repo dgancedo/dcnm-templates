@@ -1,0 +1,14 @@
+##template properties 
+name =show_int_conf;
+userDefined= false;
+supportedPlatforms = All;
+templateType = SHOW;
+templateSubType = INTERFACE;
+
+@(PrimaryAssociation=true, IsMandatory=true)
+interfaceRange interfaces;
+##
+
+##template content
+show run interface $$interfaces$$ 
+##
