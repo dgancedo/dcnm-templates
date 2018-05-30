@@ -1,0 +1,23 @@
+##template properties 
+name =int_description;
+userDefined= false;
+supportedPlatforms = N3K,N3500,N5K,N5500,N5600,N6K,N7K,N9K,VDC;
+templateType = POLICY;
+templateSubType = INTERFACE_ETHERNET;
+published = true;
+##
+##template variables
+
+@(PrimaryAssociation=true, IsMandatory=true)
+interface INTF_NAME;
+
+@(IsMandatory=true, DisplayName="Description")
+string DESCRIPTION{
+defaultValue=description;
+};
+##
+
+##template content
+interface $$INTF_NAME$$
+  description $$DESCRIPTION$$
+##
